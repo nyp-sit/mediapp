@@ -1,0 +1,242 @@
+{
+ "kind": "discovery#restDescription",
+ "etag": "\"FWXGb4Q2eZqWRcG8B2Ixrr-vrqQ/w2ZVx19zp7qfDJ2aVO5BnHP6v_c\"",
+ "discoveryVersion": "v1",
+ "id": "signupendpoint:v1",
+ "name": "signupendpoint",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "example.com",
+ "ownerName": "example.com",
+ "packagePath": "supertest",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rest",
+ "baseUrl": "https://myapp.appspot.com/_ah/api/signupendpoint/v1/",
+ "basePath": "/_ah/api/signupendpoint/v1/",
+ "rootUrl": "https://myapp.appspot.com/_ah/api/",
+ "servicePath": "signupendpoint/v1/",
+ "batchPath": "batch",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CollectionResponse_SignUp": {
+   "id": "CollectionResponse_SignUp",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "SignUp"
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Key": {
+   "id": "Key",
+   "type": "object",
+   "properties": {
+    "appId": {
+     "type": "string"
+    },
+    "complete": {
+     "type": "boolean"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "kind": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "namespace": {
+     "type": "string"
+    },
+    "parent": {
+     "$ref": "Key"
+    }
+   }
+  },
+  "SignUp": {
+   "id": "SignUp",
+   "type": "object",
+   "properties": {
+    "checkinDate": {
+     "type": "string",
+     "format": "date-time"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "nric": {
+     "type": "string"
+    },
+    "phone": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "pin": {
+     "type": "string"
+    },
+    "userEmail": {
+     "type": "string"
+    }
+   }
+  }
+ },
+ "methods": {
+  "getSignUp": {
+   "id": "signupendpoint.getSignUp",
+   "path": "signup/{id}",
+   "httpMethod": "GET",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "response": {
+    "$ref": "SignUp"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertSignUp": {
+   "id": "signupendpoint.insertSignUp",
+   "path": "signup",
+   "httpMethod": "POST",
+   "request": {
+    "$ref": "SignUp",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "SignUp"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "listSignUp": {
+   "id": "signupendpoint.listSignUp",
+   "path": "signup",
+   "httpMethod": "GET",
+   "parameters": {
+    "cursor": {
+     "type": "string",
+     "location": "query"
+    },
+    "limit": {
+     "type": "integer",
+     "format": "int32",
+     "location": "query"
+    }
+   },
+   "response": {
+    "$ref": "CollectionResponse_SignUp"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "removeSignUp": {
+   "id": "signupendpoint.removeSignUp",
+   "path": "signup/{id}",
+   "httpMethod": "DELETE",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "path"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateSignUp": {
+   "id": "signupendpoint.updateSignUp",
+   "path": "signup",
+   "httpMethod": "PUT",
+   "request": {
+    "$ref": "SignUp",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "SignUp"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}

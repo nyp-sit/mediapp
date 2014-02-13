@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>SuperTestServlet</servlet-name>
+		<servlet-class>signup.SuperTestServletServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SuperTestServlet</servlet-name>
+		<url-pattern>/supertestservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SuperTestRetrieveServlet</servlet-name>
+		<servlet-class>signup.SuperTestRetrieveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SuperTestRetrieveServlet</servlet-name>
+		<url-pattern>/SuperTestRetrieveServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>SuperTestUpdateProfileServlet</servlet-name>
+	<servlet-class>signup.SuperTestUpdateProfileServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>SuperTestUpdateProfileServlet</servlet-name>
+	<url-pattern>/SuperTestUpdateProfileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>StoreImageServlet</servlet-name>
+	<servlet-class>signup.StoreImageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>StoreImageServlet</servlet-name>
+	<url-pattern>/StoreImageServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>SuperTestCreateElder</servlet-name>
+	<servlet-class>signup.SuperTestCreateElder</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>SuperTestCreateElder</servlet-name>
+	<url-pattern>/SuperTestCreateElder</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+	<servlet-name>RetrieveElderServlet</servlet-name>
+	<servlet-class>signup.RetrieveElderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveElderServlet</servlet-name>
+	<url-pattern>/RetrieveElderServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+	<servlet-name>ElderLoginServlet</servlet-name>
+	<servlet-class>signup.ElderLoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>ElderLoginServlet</servlet-name>
+	<url-pattern>/ElderLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+	<servlet-name>RetrieveOneElderServlet</servlet-name>
+	<servlet-class>signup.RetrieveOneElderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveOneElderServlet</servlet-name>
+	<url-pattern>/RetrieveOneElderServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>EmergencyInfoservlet</servlet-name>
+	<servlet-class>signup.EmergencyInfoservlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>EmergencyInfoservlet</servlet-name>
+	<url-pattern>/EmergencyInfoservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>RetrieveMedHistory</servlet-name>
+	<servlet-class>signup.RetrieveMedHistory</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveMedHistory</servlet-name>
+	<url-pattern>/RetrieveMedHistory</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>AddMedicineServlet</servlet-name>
+	<servlet-class>signup.AddMedicineServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>AddMedicineServlet</servlet-name>
+	<url-pattern>/AddMedicineServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>RetrieveMedicine</servlet-name>
+	<servlet-class>signup.RetrieveMedicine</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveMedicine</servlet-name>
+	<url-pattern>/RetrieveMedicine</url-pattern>
+	</servlet-mapping>
+		<servlet>
+	<servlet-name>AddAlarmServlet</servlet-name>
+	<servlet-class>signup.AddAlarmServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>AddAlarmServlet</servlet-name>
+	<url-pattern>/AddAlarmServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>RetrieveAlarmSummary</servlet-name>
+	<servlet-class>signup.RetrieveAlarmSummary</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveAlarmSummary</servlet-name>
+	<url-pattern>/RetrieveAlarmSummary</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteMedicineServlet</servlet-name>
+	<servlet-class>signup.DeleteMedicineServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>DeleteMedicineServlet</servlet-name>
+	<url-pattern>/DeleteMedicineServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+	<servlet-name>RetrieveAlarmServlet</servlet-name>
+	<servlet-class>signup.RetrieveAlarmServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveAlarmServlet</servlet-name>
+	<url-pattern>/RetrieveAlarmServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RetrieveMedAck</servlet-name>
+	<servlet-class>signup.RetrieveMedAck</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>RetrieveMedAck</servlet-name>
+	<url-pattern>/RetrieveMedAck</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>MedAckServlet</servlet-name>
+	<servlet-class>signup.MedAckServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>MedAckServlet</servlet-name>
+	<url-pattern>/MedAckServlet</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+	<servlet-class>signup.ImageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>ImageServlet</servlet-name>
+	<url-pattern>/ImageServlet</url-pattern>
+	</servlet-mapping>
+	
+			<servlet>
+		<servlet-name>ElderImageServlet</servlet-name>
+	<servlet-class>signup.ElderImageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>ElderImageServlet</servlet-name>
+	<url-pattern>/ElderImageServlet</url-pattern>
+	</servlet-mapping>
+
+		<servlet>
+		<servlet-name>DeleteElderServlet</servlet-name>
+	<servlet-class>signup.DeleteElderServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>DeleteElderServlet</servlet-name>
+	<url-pattern>/DeleteElderServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
